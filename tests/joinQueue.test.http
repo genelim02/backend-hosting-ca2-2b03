@@ -1,0 +1,32 @@
+@host = localhost:3000
+@path = /customer/queue
+
+
+POST http://{{host}}{{path}} HTTP/1.1
+Content-Type: application/json
+
+# {
+#     "customer_id": 1234567878,
+#     "queue_id": "QUEUE12345"
+# }
+
+{
+    "customer_id": 1234567894,
+    "queue_id": "QUEUE12345"
+}
+
+
+# {
+#     "customer_id": 1234567880,
+#     "queue_id": "QUEUE12345"
+# }
+
+# {
+#     "customer_id": 1234567881,
+#     "queue_id": "QUEUE12348"
+# }
+
+# {
+#     "customer_id": 1234567882,
+#     "queue_id": "QUEUE12349"
+# }
