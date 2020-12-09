@@ -1,6 +1,9 @@
 {
     "name": "ades-2021s2-backend-solution",
     "version": "1.0.0",
+    "engines": {
+        "node": "15.0.1"
+      },
     "description": "",
     "main": "index.js",
     "scripts": {
