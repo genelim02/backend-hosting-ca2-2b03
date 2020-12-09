@@ -205,13 +205,13 @@ function joinQueue(customer_id, queue_id, callback) {
     callback({code: 'NotThisQueueID'})
     return error
     }
-    else if(result.rows[0].status == 'DEACTIVATE'){
+    else if(result.rows[0].status == 'INACTIVE'){
 
     callback({code: 'QueueIDInactive'})
     return error
     }
 
-    else if(result.rowCount == 1 && result.rows[0].status == 'ACTIVATE') {
+    else if(result.rowCount == 1 && result.rows[0].status == 'ACTIVE') {
 
     return pool.query(sql, [customer_id, queue_id])
 

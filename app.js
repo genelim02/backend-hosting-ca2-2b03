@@ -120,7 +120,7 @@ app.put('/company/queue', function (req, res, next) {
     if (typeof (queue_id) !='string') {
     return next({ status: 200, error: 'QueueID should be in string', code: 'INVALID_QUERY_STRING'})
     }
-    if (queue_status !="ACTIVATE" && queue_status !="DEACTIVATE") {
+    if (queue_status !="ACTIVE" && queue_status !="INACTIVE") {
     return next({ status: 400 , error: 'Error input of status', code: 'INVALID_JSON_BODY'})
     }
     database.updateQueue(queue_status, queue_id, function (err, result) {
