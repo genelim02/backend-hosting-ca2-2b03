@@ -258,10 +258,10 @@ function checkQueue(queue_id, customer_id, callback) {
             }
             if (result.rows.length){
                 if (result.rows[0].ahead>=0) {
-                    // result.rows[0].status="ACTIVE"
+                    result.rows[0].status="ACTIVE"
                     outcome=result.rows[0];
                 } else {
-                    // result.rows[0].status="INACTIVE"    
+                    result.rows[0].status="INACTIVE"    
                     outcome=result.rows[0];            
                 }
             }           
